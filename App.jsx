@@ -8,6 +8,7 @@ const App = () => {
       <Text style={{ color: 'blue', fontSize: 20 }}>Apph</Text>
       <Text style={{ fontSize: 18 }}>raj</Text>
          <Text style={{ fontSize: 18 }}>Hello World</Text>
+         <Text>hi</Text>
 
          <Image style={{width:100,height:100}} source={{uri:"https://images.unsplash.com/photo-1756043979844-3ee9c036ad2f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}}/>
          <TouchableOpacity onPress={()=>alert("Image Clicked")}>
