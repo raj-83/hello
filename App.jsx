@@ -42,11 +42,12 @@ const StackNavigator = () => {
   )
 }
 
-function MyTabs() {
+function TabNavigator() {
   return (
     <Tab.Navigator>
-      <Tab.Screen name="Home" component={HomeScreen} />
-      <Tab.Screen name="Profile" component={ProfileScreen} />
+      <Tab.Screen name="Home" component={Home} />
+      <Tab.Screen name="Profile" component={Profile} />
+      <Tab.Screen name="Search" component={Search} />
     </Tab.Navigator>
   );
 }
@@ -54,7 +55,7 @@ const App = () => {
   return (
      <NavigationContainer>
      {/* <StackNavigator /> */}
-
+      <TabNavigator />
      </NavigationContainer> 
   )
 }
