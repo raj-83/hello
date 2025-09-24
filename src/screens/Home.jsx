@@ -9,6 +9,7 @@ const Home = ({navigation}) => {
 
         <Text style ={{fontSize:20,fontWeight:"500",marginBottom:10}}>Home</Text>
         <Button title="Profile" onPress={()=>navigation.push("Home",{id:1,name:"rajeev"})}/>
+            //push pop popTo
     </View>
   )
 }

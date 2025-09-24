@@ -6,8 +6,10 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
 const stack = createNativeStackNavigator();
+const Tab = createBottomTabNavigator();
 
 const StackNavigator = () => {
   return(
@@ -40,10 +42,19 @@ const StackNavigator = () => {
   )
 }
 
+function MyTabs() {
+  return (
+    <Tab.Navigator>
+      <Tab.Screen name="Home" component={HomeScreen} />
+      <Tab.Screen name="Profile" component={ProfileScreen} />
+    </Tab.Navigator>
+  );
+}
 const App = () => {
   return (
      <NavigationContainer>
-     <StackNavigator />
+     {/* <StackNavigator /> */}
+
      </NavigationContainer> 
   )
 }
