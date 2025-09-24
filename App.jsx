@@ -12,31 +12,31 @@ const stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
 const StackNavigator = () => {
-  return(
+  return (
     <stack.Navigator initialRouteName='Home'
 
-      scrrenOptions ={{
-        headerStyle:{
-          backgroundColor:"yellow"
+      scrrenOptions={{
+        headerStyle: {
+          backgroundColor: "yellow"
         }
       }}
->  
-       <stack.Screen 
+    >
+      <stack.Screen
         name="Search"
-         component={Search} 
-         options ={{headerShown:false}}
-         /> 
-
-      <stack.Screen 
-      name="Home" 
-      component={Home} 
-       options ={{title:"Home Screen",headerStyle:{backgroundColor:"Blue"}}}
+        component={Search}
+        options={{ headerShown: false }}
       />
 
-         <stack.Screen 
-     name="Profile"
-      component={Profile} 
-      /> 
+      <stack.Screen
+        name="Home"
+        component={Home}
+        options={{ title: "Home Screen", headerStyle: { backgroundColor: "Blue" } }}
+      />
+
+      <stack.Screen
+        name="Profile"
+        component={Profile}
+      />
 
     </stack.Navigator>
   )
@@ -44,19 +44,44 @@ const StackNavigator = () => {
 
 function TabNavigator() {
   return (
-    <Tab.Navigator>
-      <Tab.Screen name="Home" component={Home} />
-      <Tab.Screen name="Profile" component={Profile} />
-      <Tab.Screen name="Search" component={Search} />
+    <Tab.Navigator initialRouteName='Home'
+      screenOptions={{  
+        
+        tabBarActiveTintColor: 'tomato',
+        tabBarInactiveTintColor: 'gray',
+        tabBarLabelStyle: { fontSize: 12
+
+         },
+         tabBarStyle: {  height: 60}
+
+      }}
+     //now icons can be added with react-native-vector-icons package
+     
+    >
+      <Tab.Screen
+        name="Home"
+        component={Home}
+        options ={{tableActiveintColor:"purple"}}
+
+      />
+      <Tab.Screen
+        name="Profile"
+        component={Profile}
+      />
+      <Tab.Screen
+        name="Search"
+        component={Search}
+      />
+
     </Tab.Navigator>
   );
 }
 const App = () => {
   return (
-     <NavigationContainer>
-     {/* <StackNavigator /> */}
+    <NavigationContainer>
+      {/* <StackNavigator /> */}
       <TabNavigator />
-     </NavigationContainer> 
+    </NavigationContainer>
   )
 }
 
