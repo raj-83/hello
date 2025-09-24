@@ -11,10 +11,31 @@ const stack = createNativeStackNavigator();
 
 const StackNavigator = () => {
   return(
-    <stack.Navigator>
-      <stack.Screen name="Home" component={Home} />
-     <stack.Screen name="Profile" component={Profile} /> 
-       <stack.Screen name="Search" component={Search} /> 
+    <stack.Navigator initialRouteName='Home'
+
+      scrrenOptions ={{
+        headerStyle:{
+          backgroundColor:"yellow"
+        }
+      }}
+>  
+       <stack.Screen 
+        name="Search"
+         component={Search} 
+         options ={{headerShown:false}}
+         /> 
+
+      <stack.Screen 
+      name="Home" 
+      component={Home} 
+       options ={{title:"Home Screen",headerStyle:{backgroundColor:"red"}}}
+      />
+
+         <stack.Screen 
+     name="Profile"
+      component={Profile} 
+      /> 
+
     </stack.Navigator>
   )
 }
