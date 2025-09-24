@@ -28,7 +28,7 @@ const StackNavigator = () => {
       <stack.Screen 
       name="Home" 
       component={Home} 
-       options ={{title:"Home Screen",headerStyle:{backgroundColor:"red"}}}
+       options ={{title:"Home Screen",headerStyle:{backgroundColor:"Blue"}}}
       />
 
          <stack.Screen 
